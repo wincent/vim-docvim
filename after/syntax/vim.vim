@@ -16,6 +16,10 @@ syntax match docvimBackticks '\v`[^ `]+`' containedin=docvimBlock contained
 syntax match docvimBlockquote '\v^\s*"\s+\zs\>\s+.+$' containedin=docvimBlock contained
 syntax match docvimCrossReference '\v\c\|:?[a-z0-9()<>-]+\|' containedin=docvimBlock contained
 syntax match docvimHeading '\v^\s*"\s+\zs#\s+.+$' containedin=docvimBlock contained
+syntax match docvimSetting "\v'[a-z]{2,}'" containedin=docvimBlock contained
+syntax match docvimSetting "\v't_..'" containedin=docvimBlock contained
+syntax match docvimSpecial '\v\<CSM-.\>' containedin=docvimBlock contained
+syntax match docvimSpecial '\v\<[-a-zA-Z0-9_]+\>' containedin=docvimBlock contained
 syntax match docvimSubheading '\v^\s*"\s+\zs##\s+.+$' containedin=docvimBlock contained
 syntax match docvimTarget '\v\c\*:?[a-z0-9()<>-]+\*' containedin=docvimBlock contained
 
@@ -45,6 +49,8 @@ highlight default link docvimBlockquote Comment
 highlight default link docvimCrossReference Identifier
 highlight default link docvimHeading Identifier
 highlight default link docvimHeadingPrefix Identifier
+highlight default link docvimSetting Type
+highlight default link docvimSpecial Special
 highlight default link docvimStar Ignore
 highlight default link docvimSubheading PreProc
 highlight default link docvimTarget String
