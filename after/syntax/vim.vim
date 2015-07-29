@@ -56,5 +56,6 @@ highlight default link docvimSetting Type
 highlight default link docvimSpecial Special
 highlight default link docvimStar Ignore
 highlight default link docvimSubheading PreProc
+highlight default link docvimSubheadingPrefix PreProc
 highlight default link docvimTarget String
 highlight default link docvimURL String
