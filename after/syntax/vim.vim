@@ -1,3 +1,156 @@
+""
+" @plugin docvim Syntax highlighting for docvim comments
+"
+" @header
+"
+"                                                                    *vim-docvim*
+" # Intro
+"
+" vim-docvim provides syntax highlighting for Vim script files that contain
+" embedded docvim comments.
+"
+" docvim (the tool, not this plug-in) is a documentation generator that
+" processes those embedded comments and produces documentation in Markdown and
+" Vim "help" formats. To avoid confusion, this document refers to the Vim
+" plug-in as "vim-docvim" and the separate generation tool as "docvim".
+"
+"
+" # Installation
+"
+" To install vim-docvim, use your plug-in management system of choice.
+"
+" If you don't have a "plug-in management system of choice", I recommend
+" Pathogen (https://github.com/tpope/vim-pathogen) due to its simplicity and
+" robustness. Assuming that you have Pathogen installed and configured, and that
+" you want to install vim-docvim into `~/.vim/bundle`, you can do so with:
+"
+" ```
+" git clone https://github.com/wincent/vim-docvim.git ~/.vim/bundle/vim-docvim
+" ```
+"
+" Alternatively, if you use a Git submodule for each Vim plug-in, you could do
+" the following after `cd`-ing into the top-level of your Git superproject:
+"
+" ```
+" git submodule add https://github.com/wincent/vim-docvim.git ~/vim/bundle/vim-docvim
+" git submodule init
+" ```
+"
+" To generate help tags under Pathogen, you can do so from inside Vim with:
+"
+" ```
+" :call pathogen#helptags()
+" ```
+"
+"
+" # Related
+"
+" The docvim tool itself is an NPM module, available at:
+"
+"   https://www.npmjs.com/package/docvim
+"
+" The official source code repo is at:
+"
+"   http://git.wincent.com/docvim.git
+"
+" A mirror exists at:
+"
+"   https://github.com/wincent/docvim
+"
+"
+" # Website
+"
+" The official vim-docvim source code repo is at:
+"
+"   http://git.wincent.com/vim-docvim.git
+"
+" A mirror exists at:
+"
+"   https://github.com/wincent/vim-docvim
+"
+" Official releases are listed at:
+"
+"   http://www.vim.org/scripts/script.php?script_id=[TODO]
+"
+"
+" # License
+"
+" Copyright 2015-present Greg Hurrell. All rights reserved.
+"
+" Redistribution and use in source and binary forms, with or without
+" modification, are permitted provided that the following conditions are met:
+"
+" 1. Redistributions of source code must retain the above copyright notice,
+"    this list of conditions and the following disclaimer.
+" 2. Redistributions in binary form must reproduce the above copyright notice,
+"    this list of conditions and the following disclaimer in the documentation
+"    and/or other materials provided with the distribution.
+"
+" THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+" ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE
+" LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+" POSSIBILITY OF SUCH DAMAGE.
+"
+"
+" # Development
+"
+" ## Contributing patches
+"
+" Patches can be sent via mail to greg@hurrell.net, or as GitHub pull requests
+" at: https://github.com/wincent/vim-docvim/pulls
+"
+" ## Cutting a new release
+"
+" At the moment the release process is manual:
+"
+" - Perform final sanity checks and manual testing
+" - Update the |docvim-history| section of the documentation
+" - Verify clean work tree:
+"
+" ```
+" git status
+" ```
+"
+" - Tag the release:
+"
+" ```
+" git tag -s -m "$VERSION release" $VERSION
+" ```
+"
+" - Publish the code:
+"
+" ```
+" git push origin master --follow-tags
+" git push github master --follow-tags
+" ```
+"
+" - Produce the release archive:
+"
+" ```
+" git archive -o vim-docvim-$VERSION.zip HEAD -- .
+" ```
+"
+" - Upload to http://www.vim.org/scripts/script.php?script_id=[TODO]
+"
+"
+" # Authors
+"
+" vim-docvim is written and maintained by Greg Hurrell <greg@hurrell.net>.
+"
+"
+" # History
+"
+" 0.1 (not yet released)
+"
+" - Initial release.
+
 syntax region docvimBlock start='\v^ *""' end='\v\zs\ze^( *$|[^"])'
 syntax region docvimPre start='\v^\s*"\s+\zs```\s*$' end='\v^\s*"\s+```\s*$' containedin=docvimBlock contained keepend
 
