@@ -1,8 +1,6 @@
 ""
 " @plugin docvim Syntax highlighting for docvim comments
 "
-" @header
-"
 "                                                                    *vim-docvim*
 " # Intro
 "
@@ -158,7 +156,6 @@ syntax match docvimAnnotation '@command' containedin=docvimBlock contained
 syntax match docvimAnnotation '@dedent' containedin=docvimBlock contained
 syntax match docvimAnnotation '@footer' containedin=docvimBlock contained
 syntax match docvimAnnotation '@function' containedin=docvimBlock contained
-syntax match docvimAnnotation '@header' containedin=docvimBlock contained
 syntax match docvimAnnotation '@indent' containedin=docvimBlock contained
 syntax match docvimAnnotation '@mapping' containedin=docvimBlock contained
 syntax match docvimAnnotation '@option' containedin=docvimBlock contained
