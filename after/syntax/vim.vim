@@ -44,7 +44,7 @@ endif
 highlight default link docvimAnnotation String
 highlight default link docvimBacktick Ignore
 highlight default link docvimBackticks Ignore
-highlight default link docvimBar Ignore
+highlight default link docvimBar Identifier
 highlight default link docvimBlock Normal
 highlight default link docvimBlockquote Comment
 highlight default link docvimComment Normal
@@ -54,7 +54,7 @@ highlight default link docvimHeadingPrefix Identifier
 highlight default link docvimPre Ignore
 highlight default link docvimSetting Type
 highlight default link docvimSpecial Special
-highlight default link docvimStar Ignore
+highlight default link docvimStar String
 highlight default link docvimSubheading PreProc
 highlight default link docvimSubheadingPrefix PreProc
 highlight default link docvimTarget String
