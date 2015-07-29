@@ -1,5 +1,5 @@
-" Make doc block comments easier to read.
 syntax region docvimBlock start='\v^ *""' end='\v\zs\ze^( *$|[^"])'
+syntax region docvimPre start='\v^\s*"\s+\zs```\s*$' end='\v^\s*"\s+```\s*$' containedin=docvimBlock contained keepend
 
 syntax match docvimAnnotation '@command' containedin=docvimBlock contained
 syntax match docvimAnnotation '@dedent' containedin=docvimBlock contained
@@ -16,6 +16,7 @@ syntax match docvimBackticks '\v`[^ `]+`' containedin=docvimBlock contained
 syntax match docvimBlockquote '\v^\s*"\s+\zs\>\s+.+$' containedin=docvimBlock contained
 syntax match docvimCrossReference '\v\c\|:?[a-z0-9()<>-]+\|' containedin=docvimBlock contained
 syntax match docvimHeading '\v^\s*"\s+\zs#\s+.+$' containedin=docvimBlock contained
+syntax match docvimPreComment '\v^\s*"' containedin=docvimPre contained
 syntax match docvimSetting "\v'[a-z]{2,}'" containedin=docvimBlock contained
 syntax match docvimSetting "\v't_..'" containedin=docvimBlock contained
 syntax match docvimSpecial '\v\<CSM-.\>' containedin=docvimBlock contained
@@ -46,9 +47,11 @@ highlight default link docvimBackticks Ignore
 highlight default link docvimBar Ignore
 highlight default link docvimBlock Normal
 highlight default link docvimBlockquote Comment
+highlight default link docvimComment Normal
 highlight default link docvimCrossReference Identifier
 highlight default link docvimHeading Identifier
 highlight default link docvimHeadingPrefix Identifier
+highlight default link docvimPre Ignore
 highlight default link docvimSetting Type
 highlight default link docvimSpecial Special
 highlight default link docvimStar Ignore
