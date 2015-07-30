@@ -152,15 +152,15 @@
 syntax region docvimBlock start='\v^\s*""' end='\v^\zs\ze\s*($|[^ \t"])'
 syntax region docvimPre start='\v^\s*"\s+\zs```\s*$' end='\v^\s*"\s+```\s*$' containedin=docvimBlock contained keepend
 
-syntax match docvimAnnotation '@command' containedin=docvimBlock contained
+syntax match docvimAnnotation '\v\@command( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@dedent' containedin=docvimBlock contained
 syntax match docvimAnnotation '@footer' containedin=docvimBlock contained
-syntax match docvimAnnotation '@function' containedin=docvimBlock contained
+syntax match docvimAnnotation '\v\@function( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@indent' containedin=docvimBlock contained
-syntax match docvimAnnotation '@mapping' containedin=docvimBlock contained
-syntax match docvimAnnotation '@option' containedin=docvimBlock contained
+syntax match docvimAnnotation '\v\@mapping( .+)?' containedin=docvimBlock contained
+syntax match docvimAnnotation '\v\@option( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@param' containedin=docvimBlock contained
-syntax match docvimAnnotation '@plugin' containedin=docvimBlock contained
+syntax match docvimAnnotation '\v\@plugin( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@private' containedin=docvimBlock contained
 syntax match docvimBackticks '\v`[^\s`]+`' containedin=docvimBlock contained
 syntax match docvimBlockquote '\v^\s*"\s+\zs\>\s+.+$' containedin=docvimBlock contained
