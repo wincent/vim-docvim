@@ -158,6 +158,7 @@ syntax match docvimAnnotation '@footer' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@function( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@indent' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@mapping( .+)?' containedin=docvimBlock contained
+syntax match docvimAnnotation '@mappings' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@option( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@param' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@plugin( .+)?' containedin=docvimBlock contained
