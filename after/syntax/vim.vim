@@ -149,7 +149,7 @@
 "
 " - Initial release.
 
-syntax region docvimBlock start='\v^\s*""' end='\v^\zs\ze\s*($|[^ \t"])'
+syntax region docvimBlock start='\v^\s*""' end='\v^\zs\ze\s*($|[^ \t"])' containedin=vimFuncBody
 syntax region docvimPre start='\v^\s*"\s+\zs```\s*$' end='\v^\s*"\s+```\s*$' containedin=docvimBlock contained keepend
 
 syntax match docvimAnnotation '\v\@command( .+)?' containedin=docvimBlock contained
