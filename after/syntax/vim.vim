@@ -153,13 +153,16 @@ syntax region docvimBlock start='\v^\s*""' end='\v^\zs\ze\s*($|[^ \t"])' contain
 syntax region docvimPre start='\v^\s*"\s+\zs```\s*$' end='\v^\s*"\s+```\s*$' containedin=docvimBlock contained keepend
 
 syntax match docvimAnnotation '\v\@command( .+)?' containedin=docvimBlock contained
+syntax match docvimAnnotation '@commands' containedin=docvimBlock contained
 syntax match docvimAnnotation '@dedent' containedin=docvimBlock contained
 syntax match docvimAnnotation '@footer' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@function( .+)?' containedin=docvimBlock contained
+syntax match docvimAnnotation '@functions' containedin=docvimBlock contained
 syntax match docvimAnnotation '@indent' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@mapping( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@mappings' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@option( .+)?' containedin=docvimBlock contained
+syntax match docvimAnnotation '@options' containedin=docvimBlock contained
 syntax match docvimAnnotation '@param' containedin=docvimBlock contained
 syntax match docvimAnnotation '\v\@plugin( .+)?' containedin=docvimBlock contained
 syntax match docvimAnnotation '@private' containedin=docvimBlock contained
