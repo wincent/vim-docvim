@@ -4,8 +4,8 @@
 "                                                                    *vim-docvim*
 " # Intro
 "
-" vim-docvim provides syntax highlighting for Vim script files that contain
-" embedded docvim comments.
+" vim-docvim provides additional syntax highlighting for Vim script files that
+" contain embedded docvim comments.
 "
 " docvim (the tool, not this plug-in) is a documentation generator that
 " processes those embedded comments and produces documentation in Markdown and
