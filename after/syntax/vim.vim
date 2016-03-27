@@ -43,17 +43,19 @@
 "
 " # Related
 "
-" The docvim tool itself is an NPM module, available at:
+" The docvim tool itself is a Haskell module, available at:
 "
-"   https://www.npmjs.com/package/docvim
+"   http://hackage.haskell.org/package/docvim
 "
 " The official source code repo is at:
 "
 "   http://git.wincent.com/docvim.git
 "
-" A mirror exists at:
+" Mirrors exist at:
 "
-"   https://github.com/wincent/docvim
+"   - https://github.com/wincent/docvim
+"   - https://gitlab.com/wincent/docvim
+"   - https://bitbucket.org/ghurrell/docvim
 "
 "
 " # Website
