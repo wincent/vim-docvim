@@ -195,21 +195,32 @@ else
   syntax match docvimSubheadingPrefix '\v## ' containedin=docvimSubheading contained
 endif
 
-highlight default link docvimAnnotation String
-highlight default link docvimBacktick Comment
-highlight default link docvimBackticks Comment
-highlight default link docvimBar Identifier
-highlight default link docvimBlock Normal
-highlight default link docvimBlockquote Comment
-highlight default link docvimComment Normal
-highlight default link docvimCrossReference Identifier
-highlight default link docvimHeading Identifier
-highlight default link docvimHeadingPrefix Identifier
-highlight default link docvimPre Comment
-highlight default link docvimSetting Type
-highlight default link docvimSpecial Special
-highlight default link docvimStar String
-highlight default link docvimSubheading PreProc
-highlight default link docvimSubheadingPrefix PreProc
-highlight default link docvimTarget String
-highlight default link docvimURL String
+function s:Highlight()
+  execute 'highlight docvimAnnotation ' . functions#italicize_group('String')
+  execute 'highlight docvimBacktick ' . functions#italicize_group('Comment')
+  execute 'highlight docvimBackticks ' . functions#italicize_group('Comment')
+  execute 'highlight docvimBar ' . functions#italicize_group('Identifier')
+  execute 'highlight docvimBlock ' . functions#italicize_group('Normal')
+  execute 'highlight docvimBlockquote ' . functions#italicize_group('Comment')
+  execute 'highlight docvimComment ' . functions#italicize_group('Normal')
+  execute 'highlight docvimCrossReference ' . functions#italicize_group('Identifier')
+  execute 'highlight docvimHeading ' . functions#italicize_group('Identifier')
+  execute 'highlight docvimHeadingPrefix ' . functions#italicize_group('Identifier')
+  execute 'highlight docvimPre ' . functions#italicize_group('Comment')
+  execute 'highlight docvimSetting ' . functions#italicize_group('Type')
+  execute 'highlight docvimSpecial ' . functions#italicize_group('Special')
+  execute 'highlight docvimStar ' . functions#italicize_group('String')
+  execute 'highlight docvimSubheading ' . functions#italicize_group('PreProc')
+  execute 'highlight docvimSubheadingPrefix ' . functions#italicize_group('PreProc')
+  execute 'highlight docvimTarget ' . functions#italicize_group('String')
+  execute 'highlight docvimURL ' . functions#italicize_group('String')
+endfunction
+
+if has('autocmd')
+  augroup Docvim
+    autocmd!
+    autocmd ColorScheme * call s:Highlight()
+  augroup END
+endif
+
+call s:Highlight()
