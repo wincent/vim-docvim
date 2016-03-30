@@ -57,6 +57,22 @@
 "   - https://gitlab.com/wincent/docvim
 "   - https://bitbucket.org/ghurrell/docvim
 "
+" ## Pinnacle
+"
+" Pinnacle is a Vim plug-in that provide management of |:highlight| groups. If
+" installed, vim-docvim will use it to apply italicized styling to Docvim
+" comments.
+"
+" The official source code repo is at:
+"
+"   http://git.wincent.com/pinnacle.git
+"
+" Mirrors exist at:
+"
+"   - https://github.com/wincent/pinnacle
+"   - https://gitlab.com/wincent/pinnacle
+"   - https://bitbucket.org/ghurrell/pinnacle
+"
 "
 " # Website
 "
@@ -195,32 +211,40 @@ else
   syntax match docvimSubheadingPrefix '\v## ' containedin=docvimSubheading contained
 endif
 
-function s:Highlight()
-  execute 'highlight docvimAnnotation ' . functions#italicize_group('String')
-  execute 'highlight docvimBacktick ' . functions#italicize_group('Comment')
-  execute 'highlight docvimBackticks ' . functions#italicize_group('Comment')
-  execute 'highlight docvimBar ' . functions#italicize_group('Identifier')
-  execute 'highlight docvimBlock ' . functions#italicize_group('Normal')
-  execute 'highlight docvimBlockquote ' . functions#italicize_group('Comment')
-  execute 'highlight docvimComment ' . functions#italicize_group('Normal')
-  execute 'highlight docvimCrossReference ' . functions#italicize_group('Identifier')
-  execute 'highlight docvimHeading ' . functions#italicize_group('Identifier')
-  execute 'highlight docvimHeadingPrefix ' . functions#italicize_group('Identifier')
-  execute 'highlight docvimPre ' . functions#italicize_group('Comment')
-  execute 'highlight docvimSetting ' . functions#italicize_group('Type')
-  execute 'highlight docvimSpecial ' . functions#italicize_group('Special')
-  execute 'highlight docvimStar ' . functions#italicize_group('String')
-  execute 'highlight docvimSubheading ' . functions#italicize_group('PreProc')
-  execute 'highlight docvimSubheadingPrefix ' . functions#italicize_group('PreProc')
-  execute 'highlight docvimTarget ' . functions#italicize_group('String')
-  execute 'highlight docvimURL ' . functions#italicize_group('String')
+function s:italicize(name, link)
+  try
+    execute 'highlight! ' . a:name . ' ' . pinnacle#italicize(a:link)
+  catch
+    execute 'highlight! link ' . a:name . ' ' . a:link
+  endtry
+endfunction
+
+function s:highlight()
+  call s:italicize('docvimAnnotation', 'String')
+  call s:italicize('docvimBacktick', 'Comment')
+  call s:italicize('docvimBackticks', 'Comment')
+  call s:italicize('docvimBar', 'Identifier')
+  call s:italicize('docvimBlock', 'Normal')
+  call s:italicize('docvimBlockquote', 'Comment')
+  call s:italicize('docvimComment', 'Normal')
+  call s:italicize('docvimCrossReference', 'Identifier')
+  call s:italicize('docvimHeading', 'Identifier')
+  call s:italicize('docvimHeadingPrefix', 'Identifier')
+  call s:italicize('docvimPre', 'Comment')
+  call s:italicize('docvimSetting', 'Type')
+  call s:italicize('docvimSpecial', 'Special')
+  call s:italicize('docvimStar', 'String')
+  call s:italicize('docvimSubheading', 'PreProc')
+  call s:italicize('docvimSubheadingPrefix', 'PreProc')
+  call s:italicize('docvimTarget', 'String')
+  call s:italicize('docvimURL', 'String')
 endfunction
 
 if has('autocmd')
   augroup Docvim
     autocmd!
-    autocmd ColorScheme * call s:Highlight()
+    autocmd ColorScheme * call s:highlight()
   augroup END
 endif
 
-call s:Highlight()
+call s:highlight()
