@@ -196,8 +196,8 @@ else
 endif
 
 highlight default link docvimAnnotation String
-highlight default link docvimBacktick Ignore
-highlight default link docvimBackticks Ignore
+highlight default link docvimBacktick Comment
+highlight default link docvimBackticks Comment
 highlight default link docvimBar Identifier
 highlight default link docvimBlock Normal
 highlight default link docvimBlockquote Comment
@@ -205,7 +205,7 @@ highlight default link docvimComment Normal
 highlight default link docvimCrossReference Identifier
 highlight default link docvimHeading Identifier
 highlight default link docvimHeadingPrefix Identifier
-highlight default link docvimPre Ignore
+highlight default link docvimPre Comment
 highlight default link docvimSetting Type
 highlight default link docvimSpecial Special
 highlight default link docvimStar String
