@@ -43,7 +43,9 @@
 "
 " # Related
 "
-" The docvim tool itself is a Haskell module, available at:
+" ## Docvim
+"
+" The Docvim tool itself is a Haskell module, available at:
 "
 "   http://hackage.haskell.org/package/docvim
 "
@@ -80,9 +82,11 @@
 "
 "   http://git.wincent.com/vim-docvim.git
 "
-" A mirror exists at:
+" Mirrors exist at:
 "
-"   https://github.com/wincent/vim-docvim
+"   - https://github.com/wincent/vim-docvim
+"   - https://gitlab.com/wincent/vim-docvim
+"   - https://bitbucket.org/ghurrell/vim-docvim
 "
 " Official releases are listed at:
 "
@@ -161,7 +165,7 @@
 "
 " # History
 "
-" 0.1 (not yet released)
+" ## 0.1 (not yet released)
 "
 " - Initial release.
 
