@@ -215,7 +215,7 @@ else
   syntax match docvimSubheadingPrefix '\v## ' containedin=docvimSubheading contained
 endif
 
-function s:italicize(name, link)
+function! s:italicize(name, link)
   try
     execute 'highlight! ' . a:name . ' ' . pinnacle#italicize(a:link)
   catch
@@ -223,7 +223,7 @@ function s:italicize(name, link)
   endtry
 endfunction
 
-function s:highlight()
+function! s:highlight()
   call s:italicize('docvimAnnotation', 'String')
   call s:italicize('docvimBacktick', 'Comment')
   call s:italicize('docvimBackticks', 'Comment')
