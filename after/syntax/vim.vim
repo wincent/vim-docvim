@@ -59,23 +59,6 @@
 "   - https://gitlab.com/wincent/docvim
 "   - https://bitbucket.org/ghurrell/docvim
 "
-" ## Pinnacle
-"
-" Pinnacle is a Vim plug-in that provide management of |:highlight| groups. If
-" installed, vim-docvim will use it to apply italicized styling to Docvim
-" comments.
-"
-" The official source code repo is at:
-"
-"   http://git.wincent.com/pinnacle.git
-"
-" Mirrors exist at:
-"
-"   - https://github.com/wincent/pinnacle
-"   - https://gitlab.com/wincent/pinnacle
-"   - https://bitbucket.org/ghurrell/pinnacle
-"
-"
 " # Website
 "
 " The official vim-docvim source code repo is at:
