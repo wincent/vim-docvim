@@ -73,7 +73,7 @@
 "
 " Official releases are listed at:
 "
-"   http://www.vim.org/scripts/script.php?script_id=[TODO]
+"   http://www.vim.org/scripts/script.php?script_id=5758
 "
 "
 " # License
@@ -138,7 +138,7 @@
 " git archive -o vim-docvim-$VERSION.zip HEAD -- .
 " ```
 "
-" - Upload to http://www.vim.org/scripts/script.php?script_id=[TODO]
+" - Upload to http://www.vim.org/scripts/script.php?script_id=5758
 "
 "
 " # Authors
@@ -148,7 +148,7 @@
 "
 " # History
 "
-" ## 0.1 (not yet released)
+" ## 1.0 (25 December 2018)
 "
 " - Initial release.
 

@@ -76,7 +76,7 @@ Mirrors exist at:
 
 Official releases are listed at:
 
-http://www.vim.org/scripts/script.php?script_id=[TODO]
+http://www.vim.org/scripts/script.php?script_id=5758
 
 LICENSE                                                         *docvim-license*
 
@@ -130,7 +130,7 @@ At the moment the release process is manual:
 >
     git archive -o vim-docvim-$VERSION.zip HEAD -- .
 <
-- Upload to http://www.vim.org/scripts/script.php?script_id=[TODO]
+- Upload to http://www.vim.org/scripts/script.php?script_id=5758
 
 AUTHORS                                                         *docvim-authors*
 
@@ -138,6 +138,6 @@ vim-docvim is written and maintained by Greg Hurrell <greg@hurrell.net>.
 
 HISTORY                                                         *docvim-history*
 
-0.1 (not yet released) ~
+1.0 (25 December 2018) ~
 
 - Initial release.
