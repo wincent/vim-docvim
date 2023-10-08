@@ -49,11 +49,7 @@
 "
 "   http://hackage.haskell.org/package/docvim
 "
-" The official source code repo is at:
-"
-"   http://git.wincent.com/docvim.git
-"
-" Mirrors exist at:
+" Source code:
 "
 "   - https://github.com/wincent/docvim
 "   - https://gitlab.com/wincent/docvim
@@ -61,11 +57,7 @@
 "
 " # Website
 "
-" The official vim-docvim source code repo is at:
-"
-"   http://git.wincent.com/vim-docvim.git
-"
-" Mirrors exist at:
+" Source code for vim-docvim:
 "
 "   - https://github.com/wincent/vim-docvim
 "   - https://gitlab.com/wincent/vim-docvim

@@ -43,11 +43,7 @@ The Docvim tool itself is a Haskell module, available at:
 
 http://hackage.haskell.org/package/docvim
 
-The official source code repo is at:
-
-http://git.wincent.com/docvim.git
-
-Mirrors exist at:
+Source code:
 
 - https://github.com/wincent/docvim
 - https://gitlab.com/wincent/docvim
@@ -56,7 +52,7 @@ Mirrors exist at:
 
 ## Website<a name="docvim-website" href="#user-content-docvim-website"></a>
 
-The official vim-docvim source code repo is at:
+Source code for vim-docvim:
 
 http://git.wincent.com/vim-docvim.git
 
