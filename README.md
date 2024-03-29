@@ -54,10 +54,6 @@ Source code:
 
 Source code for vim-docvim:
 
-http://git.wincent.com/vim-docvim.git
-
-Mirrors exist at:
-
 - https://github.com/wincent/vim-docvim
 - https://gitlab.com/wincent/vim-docvim
 - https://bitbucket.org/ghurrell/vim-docvim
